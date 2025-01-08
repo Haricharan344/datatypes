@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let a1=prompt()
+        document.write(a1,"<br>")
+        document.write(typeof(a1),"<br>")
+        let a2=prompt()
+        document.write(a1+a2,"<br>")
+        //alert("ram")
+        //document.write(alert)
+
+        //let aa=prompt("Enter your name?")
+        //alert(`my name is ${aa}`)
+
+
+        //let t=40
+        //let a = 5;
+        //let b = 10;
+        //let r=(t>40)?'Ac-off' : 'Ac-on'
+        //document.write(r,"<br>")
+      
+        //document.write(a == b , "<br>");      
+        //document.write(a === b , "<br>");     
+        //document.write(a != b , "<br>");
+        //document.write(a !=== b , "<br>");  
+
+        //document.write(a<b,"<br>")
+        //document.write(a>b"<br>")
+        //document.write(a<=b"<br>")
+        //document.write(a>=b"<br>")
+
+
+        //document.write(a>b && a>2 ,"<br>")
+        //document.write(a>b && a>12 ,"<br>")
+        //document.write(a>b || a>2 ,"<br>")
+        //document.write(!(a>b),"<br>")
+
+
+        //a+=40 
+        //b-=5
+        //document.write(a,"<br>");
+        //document.write(b,"<br>");
+
+        //document.write(a+b,"<br>");
+        //document.write(a*b,"<br>");
+        //document.write(a-b,"<br>");
+        //document.write(a/b,"<br>");
+        //document.write(a%b,"<br>");
+        //document.write(a**b,"<br>");
+        //b++
+        // document.write(b,"<br>");
+        //a--
+        //document.write(a,"<br>");
+    </script>
+</body>
+</html>
