@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //let num=prompt("Enter a number")
+        //switch(true){
+           // case num>0:
+            //document.write("number is positive");
+            //break;
+
+            //case num==0:
+            //document.write("number is zero");
+            //break;
+
+            //case num<0:
+            //document.write("number is negative");
+            //break;
+
+            //default:
+              //  document.write("invalid number");
+        //}
+        /**let a=parseInt(prompt("Enter the number of units: "))
+        switch(true){
+            case a>0 && a<51:
+            let b=  a*2;
+            document.write(b + (b*0.2));
+            break;
+            case a>=51 && a<151:
+            let c = (50*2) +((a-50)*3);
+            document.write(c + (c*0.2));
+            break;
+            case a>150 && a<251:
+            let d=  (50*2)+(100*3)+((a-150)*5);
+            document.write(d + (d*0.2));
+            break;
+            case a>250:
+            let e=  (50*2)+(100*3)+(150*5)+((a-250)*8);
+            document.write(e + (e*0.2));
+            break;
+            default:
+            alert("Invalid input")
+        }**/
+       let a=parseInt(prompt("Enter the number of students"))
+       let b=a*(a-1)/2
+       document.write("Total number of handshakes are: "+b)
+    </script>
+</body>
+</html>
+
+syntax:-
+switch(variable/expression){
+case value 1:
+//code for case 1
+break;
+
+case value 2:
+//code for case 2
+break;
+
+case value 3:
+//code for case 3
+break;
+default:
+//body of default
+}
+
+
+#280
+-50*2=100
+-100*3=300
+-100*5=500
+-30*8=240
+
+bill=1140
+subcharge=0.2*1140=228
+total bill =bill+subcharge=1140+228=1368 
+
