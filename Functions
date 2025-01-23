@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function greet(){
+        //     document.write("Hello Hari","<br>")
+        // }
+        // greet()
+        // document.write("Hello Ram","<br>")
+        // greet()
+        // document.write("Hello Ravan","<br>")
+
+        /*function greet() {
+        console.log("hello sainath");
+      }
+      greet();
+      console.log("hi sainath");
+      greet();
+      console.log("hello kiran");
+      greet();*/
+
+      //function with parameters
+
+      /*function g(name) {
+        console.log("hello" + name);
+      }
+      let name = prompt("Enter your name?");
+      g(name);*/
+
+    //   function add(a, b) {
+    //     console.log(a + b);
+    //   }
+    //   add(3, 5);
+    //   add(7, 3);
+
+    // function a(aa,bb){
+    //     return aa+bb;
+    // }
+    // let n1=parseFloat("enter a number1")
+    // let n2=parseFloat("enter a number2")
+    // //calling a function
+    // let result=a(n1,n2);
+    // //display the result
+    // document.write("The sum is:" +result)
+
+
+    sum=function(n1,n2){
+    let r=n1+n2
+    return r
+    }
+        document.write(sum(8,9))
+    </script>
+</body>
+</html>
+
+Functions:
+A function is reusable block of code
+it can be call any where in the program
+----Reusable code:using an existing code with out writing it ever we need
+you can use the same code with different arguments to get the results
+
+
+
+JS:
+key word=function
+()
+parameters=values which are declared inside the () 
+while creating a functions 
+
+
+
+
+function add(a,b){
+document.write(a+b)
+}
+add(3,5)
+add(7,3)
+
+function return:
+the return statement is used to return the value to function call
+
+ex:
+function a(aa,bb){
+return aa+bb;
+}
+let n1=parseFloat("enter a number1")
+let n2=parseFloat("enter a number2")
+let result=a(n1,n2);
+document.write("The sum is:" +result)
+
+
+
+Anonymous function:
+a function with out name, after we create a function with out name amde assign it to a variable
+ex:
+sum=function(n1,n2){
+let r=n1+n2
+return r
+}
+document.write(sum(8,9))
+
