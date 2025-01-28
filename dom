@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a{
+            color: orangered
+        }
+        .b{
+            color: blue
+        }
+        .c{
+            color: green
+        }
+    </style>
+</head>
+<body>
+    <h1 id="aa">hari</h1>
+    <h2 id="b">charan</h2>
+    <h3 id="c">reddy</h3>
+    <h4></h4>
+
+    <script>
+        let x=document.getElementById("aa")
+        document.write()
+    </script>
+</html>
+
+28-01-2025
+
+DOM (document object model)
+--It is mainly used in web development used to interact and manipulate(change) the html document
+
+--when the web page loaded , the browser created DOM of the webpage
+
+--when the html file is loaded into the browser , the js directly cannot understand the html document directly
+
+
+DOM : it is basically the representation of the same html document but in a tree-like structure composed of object
+
+key points:
+1.structure : the DOM represents the structure of html document as a tree. Each node in the elements , an attribute or text
+2.manipulation : using js  , you can interact with elements (buttons, paragraphs) on the web page , changing the content , styles , can add or remove elements
+3.event handling: you can handle the interactions ,like click or pressing the button
+4.W3C world wide web consortium
+
+Dom:
+--document 
+<body>
+    <head>
+        <title> GHR </title>
+    </head>
+        <body>   
+            <h1>HELLO</h1>
+        </body>
+</html>
+
+
+methods of document object:
+--used o interact with and manipulate the document
+Getting element:
+1.getting an element id:
+2.getting an element by class:
+3.getting an element gy tag:
+4.getting an element by querry selector:
+
+
+#id and class;
