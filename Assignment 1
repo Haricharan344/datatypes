@@ -1,0 +1,33 @@
+import React,{useState,useMemo} from 'react';
+
+const products=[
+  {id:1, name:"Laptop", category:"Electronics"},
+  {id:2, name:"Mobile", category:"Electronics"},
+  {id:3, name:"Shirt", category:"Clothing"},
+  {id:4, name:"Shoes", category:"Footwear"},
+  {id:5, name:"Watch", category:"Accessories"}
+];
+
+function App(){
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const filteredProducts = useMemo(() => {
+    return products.filter(product => {
+      return product.name.toLowerCase().includes(searchTerm.toLowerCase());
+    });
+  }, [searchTerm]);
+  return(
+    <div>
+      <input type="text"
+      placeholder="Search..."
+      onChange={e => setSearchTerm(e.target.value)}/>
+      <ul>
+        {filteredProducts.map(product => (
+          <li key={product.id}>{product.name} - {product.category}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
