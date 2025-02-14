@@ -1,0 +1,83 @@
+import React,{useReducer} from 'react';
+// function appleReducer(state=3,action){
+//   switch(action.type){
+//     case'ADD_APPLE':
+//     return state+1;
+
+//     case 'EAT_APPLE':
+//       return state-1;
+
+//       default:
+//         return state;
+//   }
+// }
+// function App(){
+//   const[state,dispatch]=useReducer(appleReducer,3)
+//   return(
+//     <div style={{padding:'20px'}}>
+//         <h1>Apple Counter</h1>
+//         <p>Number of apples:{state}</p>
+//         <button onClick={()=>dispatch({type:'ADD_APPLE'})}>ADD_APPLE</button>
+//         <button onClick={()=>dispatch({type:'ADD_APPLE'})}>EAT_APPLE</button>
+//     </div>
+//   )
+// }
+// export default App;
+
+
+import React,{useState} from "react";
+import Child from './Child';
+
+const Parent=()=>{
+  const[message,setMessage]=useState('hello World')
+  
+
+
+
+
+  return(
+    <div>
+      <h1>{message}</h1>
+      <Child changeMessage={changeMessage}/>
+    </div>
+  )
+}
+export default  Parent;
+
+
+import React from "react";
+const Child=({changeMessage})=>{
+    return(
+<button onClick={changeMessage}>click me</button>
+    )
+}
+export default Child;
+
+
+14-02-2025
+react hooks
+react renducer();
+callback()
+
+React Reducer();
+a reducer is a function that helps to update (like score ,a list) based on action we take
+--1)current state : the current value of a state
+--2)Action
+
+
+
+ex:
+action : add or remove an iteam
+State: intial value (3 iteams)
+
+--tracking apples : 
+
+clallback in React:
+--in react , a call back is function that passed as an argument to another function
+--all backs are often to communicatye with different components
+ex: a parent componentpassing as callback to a child
+--parent component displays a message ; and child component has a button
+when the button is clicked , the child will use callback and tells the parent component to update
+
+
+
