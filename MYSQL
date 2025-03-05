@@ -1,0 +1,61 @@
+C:\Users\haric\Downloads>C:\Program Files\MySQL\MySQL Server 8.0\bin
+'C:\Program' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\haric\Downloads>cd "C:\Program Files\MySQL\MySQL Server 8.0\bin"
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p
+Enter password: *****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 11
+Server version: 8.0.35 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database ecomdb;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> use ecomdb
+Database changed
+mysql> create table mobiles(id int primary key,pname varchar(30),pcost double,pimage varchar(30),pqty int);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> insert into mobiles values(1,"mobile1",10000,"https://www.google.com/aclk?sa=l&ai=DChcSEwjyvLy8kPKLAxW-yjwCHbYLCpMYABADGgJzZg&co=1&gclid=CjwKCAiA5pq-BhBuEiwAvkzVZR-HvBY7yeA-OerG8-rOekLJY9tG9cF72P68iUNV91jiq8FYUFO6ERoC0aMQAvD_BwE&sig=AOD64_2onkYRdhQn2VirVWl70fq9z3kRKw&ctype=5&q=&ved=2ahUKEwiOq7i8kPKLAxV_cGwGHQBcLloQ9aACKAB6BAgDEB8&adurl=",10);
+ERROR 1406 (22001): Data too long for column 'pimage' at row 1
+mysql> create table mobiles(id int primary key,pname varchar(30),pcost double,pimage varchar(300),pqty int);
+ERROR 1050 (42S01): Table 'mobiles' already exists
+mysql> create table mobilesTB(id int primary key,pname varchar(30),pcost double,pimage varchar(300),pqty int);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> insert into mobilesTB values(1,"mobile1",10000,"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ2V8KiCSJPydkfRk23VfX_94Le-4a8PaslY24ADeQNhiZJ85A5F19zJz6-dn6pcrzudjZVkfRHra_RROVAfz1i3nx2poYPpvqn1kq3euMy0GICV-fvBN1Rn0Gg5fOAC_UnPFxzyg&usqp=CAc",10);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into mobilesTB values(1,"mobile1",10000,"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS52CA1XHwNuqQ8te0t_ynRtF25hRiJIXdYAHY0-JYdHrpIPKnHGZtnRN5WVYI8UejhhMWV8MDl1WdyYt42bwkui3M0jgx1OEzExaJq0ton2b5eT60hFhKfQaPgjzI8u-01AnPXjIQ&usqp=CAc",30);
+ERROR 1062 (23000): Duplicate entry '1' for key 'mobilestb.PRIMARY'
+mysql> insert into mobilesTB values(2,"mobile1",10000,"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS52CA1XHwNuqQ8te0t_ynRtF25hRiJIXdYAHY0-JYdHrpIPKnHGZtnRN5WVYI8UejhhMWV8MDl1WdyYt42bwkui3M0jgx1OEzE
+xaJq0ton2b5eT60hFhKfQaPgjzI8u-01AnPXjIQ&usqp=CAc",30);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into mobilesTB values(3,"mobile1",10000,"https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ-hJplq0Iaq6e5lA2uU0WmIgHxFsaJeWlR2VQq9LB39QWlgZNG_8yhOGwo_wm6QUrdqRQQNfc0LZXfbOFIUrt9OqpRRwyKyGefQVbWNxysr4Dz6psSGhnlRciwXZpvLgQNijLcJBs&usqp=CAc",20);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into mobilesTB values(4,"mobile1",10000,"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEA8PDw8PEA8PDw8PDw8PEA8NDw0NFREWFhURFRUYHSggGBolHRUVITEhJSkrLi4wFx8/ODMsNygtLisBCgoKDg0OGhAQFy0dHR0rLS0tLS0rLS0tLS0tLS0tLS0rLS0tLSstLS0tLS0tLS0tLS0tKystLS0rLS0tLS0tLf/AABEIAPgAywMBEQACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAABAgMEBQYHAAj/xABLEAABAwIBBgQSCAUDBQAAAAABAAIDBBEFBhIhMUFhE1FxswcUFiIjMjM0U3JzdIGRkrLR0kJDUlSDobHBJGKCk7RjovAVo8LD4v/EABoBAAIDAQEAAAAAAAAAAAAAAAADAQIEBQb/xAAyEQACAQIEBAQGAgMBAQEAAAAAAQIDEQQSITETMkFRBTNScRQiYZGh8IHBorHRFeFC/9oADAMBAAIRAxEAPwDt00rWNLnGwHKdwAA1knRbagCgqcUlk7meDZus5xHGTxchG5xWqFBbyFufYzmIYvAwkSTPeeJzzLbdc3/VdCng21ewty+pDixqkeQNGjVe+hNeDa6FcxYxthcLta0jlKS6Vt0Tdi+Aj+wPzVciC7BwEfgx6yp4aC7AaeP7A9ZRw0GYHS0fgx63fFHDRGYHS0f2B63fFTw49gzDcsMLQXOaAACSS5wAHrRw49gzHPsqsuYIHGKCIukBtYOcCD/MTe3igE8ZadCzVKsIu0VdjIxb3Mv1Z4oe5FsIOwDO50uKoqdeWqil/CDNBdRo5UYv94H9um+VW4GI+n4I4lMHVPi33gf26f5UfD4j6fgOJTPdU+LfeB/bp/lR8PiPp+A4lM91TYt94H9un+VHw+I+n4DiU/24OqbFvvA/t0/yo+HxH0/AcSn+3D1T4t94H9un+VHw+I+n4DiU/wBue6p8W+8,30);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',30)' at line 1
+mysql> insert into mobilesTB values(4,"mobile4",10000,"https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRFIqeIvCbidy389jVTPkqq5Pg8FCXk7nmxR6USM9feK_sswwJjHwY6odJYLrYxVdNWKOa4WjHif0hKuIcdzAXItD7KLwueV9ubNTCRxTBrUWeBeHRW8-S1MS0_FQeYnNxkcOrsUA&usqp=CAc",50);                                                                                                                                                            Query OK, 1 row affected (0.00 sec)                                                                                                                                                                                                                                                                                                                                                                                               mysql> insert into mobilesTB values(5,"mobile5",10000,"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS52CA1XHwNuqQ8te0t_ynRtF25hRiJIXdYAHY0-JYdHrpIPKnHGZtnRN5WVYI8UejhhMWV8MDl1WdyYt42bwkui3M0jgx1OEzExaJq0ton2b5eT60hFhKfQaPgjzI8u-01AnPXjIQ&usqp=CAc",70);
+Query OK, 1 row affected (0.01 sec)                                                                                                                                                                                                                                                                                                                                                                                               mysql> select * from mobilesTB;
++----+---------+-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+
+| id | pname   | pcost | pimage                                                                                                                                                                                                     | pqty |
++----+---------+-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+
+|  1 | mobile1 | 10000 | https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ2V8KiCSJPydkfRk23VfX_94Le-4a8PaslY24ADeQNhiZJ85A5F19zJz6-dn6pcrzudjZVkfRHra_RROVAfz1i3nx2poYPpvqn1kq3euMy0GICV-fvBN1Rn0Gg5fOAC_UnPFxzyg&usqp=CAc  |   10 |
+|  2 | mobile1 | 10000 | https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS52CA1XHwNuqQ8te0t_ynRtF25hRiJIXdYAHY0-JYdHrpIPKnHGZtnRN5WVYI8UejhhMWV8MDl1WdyYt42bwkui3M0jgx1OEzExaJq0ton2b5eT60hFhKfQaPgjzI8u-01AnPXjIQ&usqp=CAc |   30 |
+|  3 | mobile1 | 10000 | https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ-hJplq0Iaq6e5lA2uU0WmIgHxFsaJeWlR2VQq9LB39QWlgZNG_8yhOGwo_wm6QUrdqRQQNfc0LZXfbOFIUrt9OqpRRwyKyGefQVbWNxysr4Dz6psSGhnlRciwXZpvLgQNijLcJBs&usqp=CAc |   20 |
+|  4 | mobile4 | 10000 | https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRFIqeIvCbidy389jVTPkqq5Pg8FCXk7nmxR6USM9feK_sswwJjHwY6odJYLrYxVdNWKOa4WjHif0hKuIcdzAXItD7KLwueV9ubNTCRxTBrUWeBeHRW8-S1MS0_FQeYnNxkcOrsUA&usqp=CAc  |   50 |
+|  5 | mobile5 | 10000 | https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS52CA1XHwNuqQ8te0t_ynRtF25hRiJIXdYAHY0-JYdHrpIPKnHGZtnRN5WVYI8UejhhMWV8MDl1WdyYt42bwkui3M0jgx1OEzExaJq0ton2b5eT60hFhKfQaPgjzI8u-01AnPXjIQ&usqp=CAc |   70 |
++----+---------+-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+
+5 rows in set (0.01 sec)                                                                                                                                                                                                                                                                                                                                                                                                          mysql>                                                                                                                                                                                                           
